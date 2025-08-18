@@ -1,3 +1,4 @@
+import 'package:cinetopia/ui/components/movie_card.dart';
 import 'package:flutter/material.dart';
 
 class SearchMovies extends StatelessWidget {
@@ -5,6 +6,6 @@ class SearchMovies extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text("Search Movies")));
+    return Scaffold(body: Center(child: MovieCard()));
   }
 }
