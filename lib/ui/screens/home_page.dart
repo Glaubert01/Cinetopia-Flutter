@@ -1,4 +1,5 @@
 import 'package:cinetopia/ui/components/buttons.dart';
+import 'package:cinetopia/ui/screens/search_movies.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -7,15 +8,44 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: <Widget>[
-          Image.asset("assets/logo.png"),
-          Image.asset("assets/splash.png"),
-          Text(
-            "O lugar ideal para buscar, salvar e organizar seus filmes favoritos!",
+      body: Ink(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: <Color>[Color(0xFF000000), Color(0xFF1D0E44)],
+            begin: Alignment.topCenter,
           ),
-          PrimaryButton(),
-        ],
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 26),
+          child: Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 24),
+                  child: Image.asset("assets/logo.png"),
+                ),
+                Image.asset("assets/splash.png"),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 24),
+                  child: Text(
+                    "O lugar ideal para buscar, salvar e organizar seus filmes favoritos!",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                PrimaryButton(
+                  text: "Quero começar!",
+                  icon: Icons.arrow_forward,
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SearchMovies()),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

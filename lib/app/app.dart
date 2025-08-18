@@ -1,4 +1,4 @@
-import 'package:cinetopia/ui/screens/home.dart';
+import 'package:cinetopia/ui/screens/home_page.dart';
 import 'package:flutter/material.dart';
 
 class Cinetopia extends StatelessWidget {
