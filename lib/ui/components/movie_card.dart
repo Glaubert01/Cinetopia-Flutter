@@ -7,14 +7,17 @@ class MovieCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
-        Container(
-          width: 90,
-          height: 120,
-          decoration: BoxDecoration(
-            color: Color(0xFF000000),
-            borderRadius: BorderRadius.circular(8),
+        Padding(
+          padding: const EdgeInsets.only(top: 32),
+          child: Container(
+            width: 90,
+            height: 120,
+            decoration: BoxDecoration(
+              color: Color(0xFF000000),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            margin: const EdgeInsets.only(right: 16),
           ),
-          margin: const EdgeInsets.only(right: 16),
         ),
         Column(
           mainAxisSize: MainAxisSize.min,
